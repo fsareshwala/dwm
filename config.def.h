@@ -59,6 +59,8 @@ static const Layout layouts[] = {
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
 static const char *termcmd[]  = { "urxvt", NULL };
+static const char scratchpadname[] = "scratchpad";
+static const char *scratchpadcmd[] = { "urxvt", "-title", scratchpadname, "-geometry", "120x34", NULL };
 static const char *abbrcmd[] = { "/home/fsareshwala/prefix/bin/abbr", NULL };
 static const char *flameshotcmd[] = { "flameshot", "full", "-p", "/home/fsareshwala", NULL };
 
@@ -68,6 +70,7 @@ static Key keys[] = {
 	{ MODKEY,                       XK_e,      spawn,          {.v = abbrcmd } },
 	{ MODKEY,                       XK_s,      spawn,          {.v = flameshotcmd } },
 	{ MODKEY,                       XK_Return, spawn,          {.v = termcmd } },
+	{ MODKEY,                       XK_grave,  togglescratch,  {.v = scratchpadcmd } },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
