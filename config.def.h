@@ -1,5 +1,7 @@
 /* See LICENSE file for copyright and license details. */
 
+#include <X11/XF86keysym.h>
+
 /* appearance */
 static const unsigned int borderpx  = 3;        /* border pixel of windows */
 static const unsigned int gappx     = 10;       /* gaps between windows */
@@ -64,6 +66,10 @@ static const char *scratchpadcmd[] = { "urxvt", "-title", scratchpadname, "-geom
 static const char *abbrcmd[] = { "/home/fsareshwala/prefix/bin/abbr", NULL };
 static const char *flameshotcmd[] = { "flameshot", "full", "-p", "/home/fsareshwala", NULL };
 
+static const char *volume_up[]   = { "amixer", "sset", "Master", "5%+",     NULL };
+static const char *volume_down[] = { "amixer", "sset", "Master", "5%-",     NULL };
+static const char *mute[] =        { "amixer", "sset", "Master", "toggle",  NULL };
+
 static Key keys[] = {
 	/* modifier                     key        function        argument */
 	{ MODKEY,                       XK_r,      spawn,          {.v = dmenucmd } },
@@ -94,6 +100,9 @@ static Key keys[] = {
 	{ MODKEY,                       XK_minus,  setgaps,        {.i = -1 } },
 	{ MODKEY,                       XK_equal,  setgaps,        {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_equal,  setgaps,        {.i = 0  } },
+	{ 0,                            XF86XK_AudioMute, spawn,   {.v = mute } },
+	{ 0,                            XF86XK_AudioLowerVolume, spawn, {.v = volume_down } },
+	{ 0,                            XF86XK_AudioRaiseVolume, spawn, {.v = volume_up } },
 	TAGKEYS(                        XK_1,                      0)
 	TAGKEYS(                        XK_2,                      1)
 	TAGKEYS(                        XK_3,                      2)
