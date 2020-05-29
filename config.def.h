@@ -61,10 +61,12 @@ static const Layout layouts[] = {
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[] = { "/home/fsareshwala/code/dmenu/dmenu_run", "-c", "-l", "50", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
 static const char *termcmd[]  = { "urxvt", NULL };
+
 static const char scratchpadname[] = "scratchpad";
-static const char *scratchpadcmd[] = { "urxvt", "-title", scratchpadname, "-geometry", "120x34", NULL };
-static const char *abbrcmd[] = { "/home/fsareshwala/prefix/bin/abbr", NULL };
-static const char *flameshotcmd[] = { "flameshot", "full", "-p", "/home/fsareshwala", NULL };
+static const char *scratchpad[] = { "urxvt", "-title", scratchpadname, "-geometry", "120x34", NULL };
+
+static const char *abbr[] = { "/home/fsareshwala/prefix/bin/abbr", NULL };
+static const char *flameshot[] = { "flameshot", "full", "-p", "/home/fsareshwala", NULL };
 
 static const char *volume_up[]   = { "amixer", "sset", "Master", "5%+",     NULL };
 static const char *volume_down[] = { "amixer", "sset", "Master", "5%-",     NULL };
@@ -73,10 +75,10 @@ static const char *mute[] =        { "amixer", "sset", "Master", "toggle",  NULL
 static Key keys[] = {
 	/* modifier                     key        function        argument */
 	{ MODKEY,                       XK_r,      spawn,          {.v = dmenucmd } },
-	{ MODKEY,                       XK_e,      spawn,          {.v = abbrcmd } },
-	{ MODKEY,                       XK_s,      spawn,          {.v = flameshotcmd } },
+	{ MODKEY,                       XK_e,      spawn,          {.v = abbr } },
+	{ MODKEY,                       XK_s,      spawn,          {.v = flameshot } },
 	{ MODKEY,                       XK_Return, spawn,          {.v = termcmd } },
-	{ MODKEY,                       XK_grave,  togglescratch,  {.v = scratchpadcmd } },
+	{ MODKEY,                       XK_grave,  togglescratch,  {.v = scratchpad } },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
