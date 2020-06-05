@@ -67,8 +67,6 @@ static const char *scratchpad[] = { "urxvt", "-title", scratchpadname, "-geometr
 
 static const char *abbr[] = { "/home/fsareshwala/prefix/bin/abbr", NULL };
 static const char *flameshot[] = { "flameshot", "full", "-p", "/home/fsareshwala", NULL };
-static const char *ocr[] = { "/home/fsareshwala/prefix/bin/ocr", NULL };
-static const char *speakcb[] = { "/home/fsareshwala/prefix/bin/speakcb", NULL };
 
 static const char *volume_up[]   = { "amixer", "sset", "Master", "5%+",     NULL };
 static const char *volume_down[] = { "amixer", "sset", "Master", "5%-",     NULL };
@@ -78,8 +76,6 @@ static Key keys[] = {
 	/* modifier                     key        function        argument */
 	{ MODKEY,                       XK_r,      spawn,          {.v = dmenucmd } },
 	{ MODKEY,                       XK_e,      spawn,          {.v = abbr } },
-	{ MODKEY,                       XK_o,      spawn,          {.v = ocr } },
-	{ MODKEY,                       XK_s,      spawn,          {.v = speakcb } },
 	{ MODKEY|ShiftMask,             XK_s,      spawn,          {.v = flameshot } },
 	{ MODKEY,                       XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY,                       XK_grave,  togglescratch,  {.v = scratchpad } },
