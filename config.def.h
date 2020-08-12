@@ -66,7 +66,7 @@ static const char *dmenucmd[] = { "/home/fsareshwala/code/dmenu/dmenu_run", "-c"
 static const char *termcmd[]  = { "urxvt", NULL };
 
 static const char scratchpadname[] = "scratchpad";
-static const char *scratchpad[] = { "urxvt", "-title", scratchpadname, "-geometry", "120x34", NULL };
+static const char *scratchpad[] = { "urxvt", "-title", scratchpadname, "-geometry", "240x56", NULL };
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
