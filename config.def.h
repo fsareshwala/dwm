@@ -4,7 +4,7 @@
 
 /* appearance */
 static const unsigned int borderpx  = 3;        /* border pixel of windows */
-static const unsigned int gappx     = 10;       /* gaps between windows */
+static const unsigned int gappx     = 15;       /* gaps between windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const int swallowfloating    = 0;        /* 1 means swallow floating windows by default */
 static const int showbar            = 1;        /* 0 means no bar */
@@ -104,7 +104,7 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_period, tagmon,         {.i = +1 } },
 	{ MODKEY,                       XK_minus,  setgaps,        {.i = -1 } },
 	{ MODKEY,                       XK_equal,  setgaps,        {.i = +1 } },
-	{ MODKEY|ShiftMask,             XK_equal,  setgaps,        {.i = 0  } },
+	{ MODKEY|ShiftMask,             XK_equal,  setgaps,        {.i = gappx  } },
 	{ 0,                            XF86XK_AudioMute, spawn,   SHCMD("amixer sset Master toggle") },
 	{ 0,                            XF86XK_AudioLowerVolume, spawn, SHCMD("amixer sset Master 5%-") },
 	{ 0,                            XF86XK_AudioRaiseVolume, spawn, SHCMD("amixer sset Master 5%+") },
