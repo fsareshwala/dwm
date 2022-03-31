@@ -1,4 +1,5 @@
 /* See LICENSE file for copyright and license details. */
+// clang-format off
 
 #include <X11/XF86keysym.h>
 
