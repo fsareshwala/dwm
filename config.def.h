@@ -82,6 +82,7 @@ static Key keys[] = {
 	{ MODKEY,                       XK_Print,  spawn,          SHCMD("/home/fsareshwala/prefix/bin/screenshot") },
 	{ MODKEY|ShiftMask,             XK_Print,  spawn,          SHCMD("/home/fsareshwala/prefix/bin/screenshot -s") },
 	{ MODKEY,                       XK_o,      spawn,          SHCMD("/home/fsareshwala/prefix/bin/ocr") },
+	{ ControlMask,                  XK_e,      spawn,          SHCMD("/home/fsareshwala/prefix/bin/nvim-edit") },
 	{ MODKEY,                       XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY,                       XK_grave,  togglescratch,  {.v = scratchpad } },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
