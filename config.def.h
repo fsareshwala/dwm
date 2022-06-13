@@ -77,12 +77,10 @@ static Key keys[] = {
 	/* modifier                     key        function        argument */
 	{ MODKEY,                       XK_r,      spawn,          {.v = dmenucmd } },
 	{ MODKEY,                       XK_e,      spawn,          SHCMD("/home/fsareshwala/prefix/bin/abbr") },
-	{ MODKEY|ShiftMask,             XK_e,      spawn,          SHCMD("/home/fsareshwala/prefix/bin/emoji") },
+	{ MODKEY|ControlMask,           XK_e,      spawn,          SHCMD("/home/fsareshwala/prefix/bin/emoji") },
 	{ MODKEY,                       XK_s,      spawn,          SHCMD("/home/fsareshwala/prefix/bin/speakcb") },
 	{ MODKEY,                       XK_Print,  spawn,          SHCMD("/home/fsareshwala/prefix/bin/screenshot") },
-	{ MODKEY|ShiftMask,             XK_Print,  spawn,          SHCMD("/home/fsareshwala/prefix/bin/screenshot -s") },
 	{ MODKEY,                       XK_o,      spawn,          SHCMD("/home/fsareshwala/prefix/bin/ocr") },
-	{ ControlMask,                  XK_e,      spawn,          SHCMD("/home/fsareshwala/prefix/bin/nvim-edit") },
 	{ MODKEY,                       XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY,                       XK_grave,  togglescratch,  {.v = scratchpad } },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
