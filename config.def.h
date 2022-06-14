@@ -67,7 +67,7 @@ static const Layout layouts[] = {
 
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
-static const char* dmenucmd[] = {"/home/fsareshwala/code/dmenu/dmenu_run", "-c", "-l", "50", "-m", dmenumon, "-fn", font, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_blue, "-sf", col_gray4, NULL};
+static const char* dmenucmd[] = {"/usr/local/bin/dmenu_run", "-c", "-l", "50", "-m", dmenumon, "-fn", font, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_blue, "-sf", col_gray4, NULL};
 static const char *termcmd[]  = { "urxvt", NULL };
 
 static const char scratchpadname[] = "scratchpad";
@@ -76,11 +76,11 @@ static const char *scratchpad[] = { "urxvt", "-title", scratchpadname, "-geometr
 static Key keys[] = {
 	/* modifier                     key        function        argument */
 	{ MODKEY,                       XK_r,      spawn,          {.v = dmenucmd } },
-	{ MODKEY,                       XK_e,      spawn,          SHCMD("/home/fsareshwala/prefix/bin/abbr") },
-	{ MODKEY|ControlMask,           XK_e,      spawn,          SHCMD("/home/fsareshwala/prefix/bin/emoji") },
-	{ MODKEY,                       XK_s,      spawn,          SHCMD("/home/fsareshwala/prefix/bin/speakcb") },
-	{ MODKEY,                       XK_Print,  spawn,          SHCMD("/home/fsareshwala/prefix/bin/screenshot") },
-	{ MODKEY,                       XK_o,      spawn,          SHCMD("/home/fsareshwala/prefix/bin/ocr") },
+	{ MODKEY,                       XK_e,      spawn,          SHCMD("abbr") },
+	{ MODKEY|ControlMask,           XK_e,      spawn,          SHCMD("emoji") },
+	{ MODKEY,                       XK_s,      spawn,          SHCMD("speakcb") },
+	{ MODKEY,                       XK_Print,  spawn,          SHCMD("screenshot") },
+	{ MODKEY,                       XK_o,      spawn,          SHCMD("ocr") },
 	{ MODKEY,                       XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY,                       XK_grave,  togglescratch,  {.v = scratchpad } },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
