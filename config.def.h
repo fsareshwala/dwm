@@ -109,8 +109,8 @@ static Key keys[] = {
 	{ 0,                        XF86XK_AudioMute,         spawn,          SHCMD("amixer sset Master toggle") },
 	{ 0,                        XF86XK_AudioLowerVolume,  spawn,          SHCMD("amixer sset Master 5%-") },
 	{ 0,                        XF86XK_AudioRaiseVolume,  spawn,          SHCMD("amixer sset Master 5%+") },
-	{ 0,                        XF86XK_MonBrightnessUp,   spawn,          SHCMD("brightness up") },
-	{ 0,                        XF86XK_MonBrightnessDown, spawn,          SHCMD("brightness down") },
+	{ 0,                        XF86XK_MonBrightnessUp,   spawn,          {.v = (const char*[]){"/home/fsareshwala/prefix/bin/brightness", "up", NULL} } },
+	{ 0,                        XF86XK_MonBrightnessDown, spawn,          {.v = (const char*[]){"/home/fsareshwala/prefix/bin/brightness", "down", NULL} } },
 	TAGKEYS(                    XK_1,                     0)
 	TAGKEYS(                    XK_2,                     1)
 	TAGKEYS(                    XK_3,                     2)
