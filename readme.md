@@ -15,6 +15,15 @@ I have applied the following patches in this repository:
 I'd like to implement the following features at some point in the future:
 - Shift+J / Shift+K: move the currently focused client up and down the stack without losing focus
 
+Dependencies
+------------
+On debian based systems, the following libraries are required in order to build `dwm`:
+
+- `libx11-xcb-dev`
+- `libxft-dev`
+- `libxinerama-dev`
+- `libxcb-res0-dev`
+
 Upstream Project
 ----------------
 For more information about `dwm`, see the [upstream project homepage](https://dwm.suckless.org).
