@@ -9,11 +9,9 @@ I have applied the following patches in this repository:
 - [fullgaps](https://dwm.suckless.org/patches/fullgaps): adds gaps between client windows
 - [scratchpad](https://dwm.suckless.org/patches/scratchpad): spawn or restore a floating terminal
   window
+- [stacker](https://dwm.suckless.org/patches/stacker): move windows up/down the stack (super-k/j)
 - [swallow](https://dwm.suckless.org/patches/swallow): adds window swallowing to `dwm` as known from
   Plan 9's windowing system rio
-
-I'd like to implement the following features at some point in the future:
-- Shift+J / Shift+K: move the currently focused client up and down the stack without losing focus
 
 Dependencies
 ------------
