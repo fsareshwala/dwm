@@ -77,7 +77,6 @@ static Key keys[] = {
 	/* modifier                 key                       function        argument */
 	{ MODKEY,                   XK_r,                     spawn,          {.v = dmenucmd } },
 	{ MODKEY,                   XK_e,                     spawn,          SHCMD("/home/fsareshwala/prefix/bin/abbr") },
-	{ MODKEY|ControlMask,       XK_e,                     spawn,          SHCMD("/home/fsareshwala/prefix/bin/emoji") },
 	{ MODKEY,                   XK_s,                     spawn,          SHCMD("/home/fsareshwala/prefix/bin/speakcb") },
 	{ MODKEY,                   XK_Print,                 spawn,          SHCMD("/home/fsareshwala/prefix/bin/screenshot") },
 	{ MODKEY,                   XK_o,                     spawn,          SHCMD("/home/fsareshwala/prefix/bin/ocr") },
