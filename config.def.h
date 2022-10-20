@@ -82,9 +82,11 @@ static Key keys[] = {
 	/* modifier                 key                       function        argument */
 	{ MODKEY,                   XK_r,                     spawn,          {.v = dmenucmd } },
 	{ MODKEY,                   XK_e,                     spawn,          SHCMD("/home/fsareshwala/prefix/bin/abbr") },
-	{ MODKEY,                   XK_s,                     spawn,          SHCMD("/home/fsareshwala/prefix/bin/speakcb") },
-	{ MODKEY,                   XK_Print,                 spawn,          SHCMD("/home/fsareshwala/prefix/bin/screenshot") },
-	{ MODKEY,                   XK_o,                     spawn,          SHCMD("/home/fsareshwala/prefix/bin/ocr") },
+	{ 0,                        XK_F1,                    spawn,          SHCMD("/home/fsareshwala/prefix/bin/speakcb") },
+	{ 0,                        XK_F11,                   spawn,          SHCMD("amixer sset Master 5%-") },
+	{ 0,                        XK_F12,                   spawn,          SHCMD("amixer sset Master 5%+") },
+	{ 0,                        XK_Print,                 spawn,          SHCMD("/home/fsareshwala/prefix/bin/screenshot") },
+	{ 0,                        XK_Scroll_Lock,           spawn,          SHCMD("/home/fsareshwala/prefix/bin/ocr") },
 	{ MODKEY,                   XK_Return,                spawn,          {.v = termcmd } },
 	{ MODKEY,                   XK_grave,                 togglescratch,  {.v = scratchpad } },
 	{ MODKEY,                   XK_b,                     togglebar,      {0} },
@@ -113,8 +115,6 @@ static Key keys[] = {
 	{ 0,                        XF86XK_AudioMute,         spawn,          SHCMD("amixer sset Master toggle") },
 	{ 0,                        XF86XK_AudioLowerVolume,  spawn,          SHCMD("amixer sset Master 5%-") },
 	{ 0,                        XF86XK_AudioRaiseVolume,  spawn,          SHCMD("amixer sset Master 5%+") },
-	{ 0,                        XK_F11,                   spawn,          SHCMD("amixer sset Master 5%-") },
-	{ 0,                        XK_F12,                   spawn,          SHCMD("amixer sset Master 5%+") },
 	{ 0,                        XF86XK_MonBrightnessUp,   spawn,          {.v = (const char*[]){"/home/fsareshwala/prefix/bin/brightness", "up", NULL} } },
 	{ 0,                        XF86XK_MonBrightnessDown, spawn,          {.v = (const char*[]){"/home/fsareshwala/prefix/bin/brightness", "down", NULL} } },
 	TAGKEYS(                    XK_1,                     0)
